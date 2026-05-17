@@ -1,0 +1,107 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# uv / packaging
+# Dacă vrei să versionezi lock file-ul, comentează linia de mai jos
+# uv.lock
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Teste / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Airflow (directorul airflow_home)
+airflow_home/airflow.cfg
+airflow_home/airflow.db
+airflow_home/webserver_config.py
+airflow_home/logs/
+airflow_home/*.pid
+airflow_home/*.err
+airflow_home/*.log
+airflow_home/dags/__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# --- Airflow local artifacts & security ---
+# Fișiere generate automat cu parole/secrete
+*simple_auth_manager_passwords.json.generated
+standalone_admin_password.txt
+
+# Baza de date locală (SQLite) - nu vrei să salvezi execuțiile locale în Git
+*.db
+airflow.db
+airflow.db-shm
+airflow.db-wal
+
+# Logurile Airflow (pot deveni uriașe și conțin date sensibile din task-uri)
+airflow/logs/
+logs/
+
+# Fișiere PID (procese locale)
+*.pid
+airflow-webserver.pid
+
+# --- Environment Variables & Secrets ---
+.env
+.env.local
+.env.*.local
+*.env
+
+# --- Dataset archive ---
+Dataset/
+*.wav
+*.csv
+dataset*.tar.gz
+*.tar.gz
+Downloads/
+Segments/
+Transcriptions/
