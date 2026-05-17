@@ -193,3 +193,36 @@ episode_id,segment_number,wav_filename,wav_path,text
 - **Sample rate:** 16000 Hz (16kHz)
 - **Canale:** Mono (1 channel)
 - **Durată maximă segment:** 30 secunde
+
+---
+
+## 🎧 8. Transcript Viewer (Streamlit UI)
+
+Pentru a verifica și edita transcrierile, proiectul include o aplicație Streamlit.
+
+### Pornire
+
+```bash
+uv run streamlit run app_transcript_viewer.py
+```
+
+Aplicația va fi disponibilă la **http://localhost:8501**
+
+### Funcționalități
+
+- **Selector fișiere:** Dropdown pentru selectarea unui fișier audio
+- **Filtru status:** Selectează între "All", "Unchecked", sau "Checked"
+- **Căutare:** Filtrează transcrierile după cuvinte cheie
+- **Marcare verificare:** Checkbox pentru a marca transcrierea ca verificată
+- **Redare audio:** Ascultă fiecare segment direct în browser
+- **Editare transcript:** Modifică transcrierea într-un text box
+- **Salvare:** Actualizează automat fișierul `Dataset/transcriptions.csv`
+- **Vizualizare tabel:** Afișează toate transcrierile cu statusul de verificare
+
+### Fișier CSV
+
+Transcrierile sunt stocate în `Dataset/transcriptions.csv` cu coloanele:
+- `id` - Identificator unic (ex: ep_5639_seg_000)
+- `wav_filename` - Numele fișierului audio
+- `text` - Transcrierea text
+- `checked` - Status verificare (True/False)

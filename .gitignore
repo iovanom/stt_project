@@ -21,6 +21,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.ruff_cache
 
 # uv / packaging
 # Dacă vrei să versionezi lock file-ul, comentează linia de mai jos
