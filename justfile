@@ -15,3 +15,8 @@ watch dag_id:
 # Usage: just watch-live <dag_id> [interval]
 watch-live dag_id interval="10":
     @uv run python scripts/dag_progress.py {{dag_id}} -w -i {{interval}}
+
+# Creează arhiva datasetului
+# Usage: just archive
+archive:
+    @uv run python scripts/create_dataset_archive.py
